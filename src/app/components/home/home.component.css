@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 body {
     margin: 0;
     box-sizing: border-box;
 }
-
-
-/* CSS for header */
 
 .header {
     display: flex;
@@ -77,14 +73,15 @@ body {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4)
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
 }
 
 .achievements {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 40px 80px;
+    padding: 40px;
 }
 
 .achievements .work {
@@ -93,6 +90,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .achievements .work i {
@@ -119,17 +118,23 @@ body {
 
 .about-me {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 40px 80px;
+    padding: 40px;
     border-top: 2px solid #eeeeee;
 }
 
 .about-me img {
-    width: 500px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
+}
+
+.about-me-text {
+    flex: 1 1 400px;
+    margin: 20px;
 }
 
 .about-me-text h2 {
@@ -150,21 +155,22 @@ body {
 
 .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     background-color: #302f49;
-    padding: 40px 80px;
+    padding: 40px;
 }
 
-.footer .copy {
+.copy {
     color: #fff;
+    margin-bottom: 20px;
 }
 
 .bottom-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 40px 0;
+    flex-wrap: wrap;
 }
 
 .bottom-links .links {
@@ -172,7 +178,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
 }
 
 .bottom-links .links span {
@@ -186,4 +193,24 @@ body {
     text-decoration: none;
     color: #a1a1a1;
     padding: 10px 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .achievements .work {
+        width: 100%;
+    }
+    .about-me {
+        flex-direction: column;
+    }
+    .about-me img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .about-me-text {
+        margin: 0;
+        text-align: center;
+    }
+    .bottom-links .links {
+        margin-bottom: 10px;
+    }
 }
